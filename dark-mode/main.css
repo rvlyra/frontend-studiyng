@@ -1,0 +1,64 @@
+@import 'aux.css';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+
+ font-family:Arial, Helvetica, sans-serif;
+}
+.title, p {
+  margin-bottom: 5%;
+}
+
+/* DarkMode Switch */
+.pag {
+  color: rgb(24, 23, 23);
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+#darkmode-input {
+  display: none;
+}
+#darkmode-input:checked ~ .pag {
+  color: rgb(245, 234, 234); 
+  background-color: rgb(27, 24, 24);
+  height: 100vh;
+  width: 100vw;
+}
+
+.darkmode-toggler {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  background-color: rgb(77, 58, 77);
+  border: 2px solid rgb(192, 186, 192);
+  border-radius: 15px;
+  top: 10px;
+  right: 10px;
+
+  /*transição suave*/
+  transition: all 400ms ease-in-out;
+}
+.darkmode-toggler div {
+  width: 12px;
+  height: 12px;
+  background-color:rgb(236, 234, 245);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  /*transição suave*/
+  transition: all 400ms ease-in-out;
+}
+
+#darkmode-input:checked ~ .darkmode-toggler {
+  background-color: rgb(230, 236, 247);
+}
+#darkmode-input:checked ~ .darkmode-toggler div {
+  background-color: rgb(40, 48, 61);
+  left: 12px;
+}
